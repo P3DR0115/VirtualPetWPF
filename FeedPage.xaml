@@ -1,0 +1,21 @@
+﻿<Page x:Class="VirtualPetWPF.FeedPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VirtualPetWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="FeedPage" Height="400" Width="525">
+
+    <Grid>
+
+        <Label x:Name="FeedLbl" Content="Feeding Menu" Margin="150,22,150.8,292" FontSize="20" HorizontalContentAlignment="Center"/>
+        <Label x:Name="InventoryLbl" Content="Inventory" Margin="212,113,192.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="ProductPicker" Margin="212,148,192.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True"/>
+        <Button x:Name="UseButton" Content="Use" Margin="192,280,192.8,50" VerticalAlignment="Top" Click="UseButton_Click"/>
+        <Button x:Name="ReturnToMainButton" Content="Return to Main Menu" Margin="192,305,192.8,25" VerticalAlignment="Top" Click="ReturnToMainButton_Click"/>
+        <Label x:Name="StaminaIndicator" Content="Stamina: " HorizontalAlignment="Left" Margin="212,82,0,0" VerticalAlignment="Top" Width="150" ToolTip="Your Stamina"/>
+
+    </Grid>
+</Page>

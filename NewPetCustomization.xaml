@@ -1,0 +1,31 @@
+﻿<Page x:Class="VirtualPetWPF.NewPetCustomization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VirtualPetWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="NewPetCustomization" Height="400" Width="525">
+
+    <Grid>
+        <Label Name="NewPetTitleLbl" Content="New Pet Customization" Margin="150,22,150.8,292" FontSize="20" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="SpeciesPicker" Margin="50,110,354.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" DropDownClosed="SpeciesPicker_DropDownClosed"/>
+        <Label x:Name="SpeciesLbl" Content="Species" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center"/>
+
+        <ComboBox x:Name="ColorPicker" Margin="355,110,49.8,268" AllowDrop="True" AutomationProperties.IsRequiredForForm="True"/>
+        <Label x:Name="ColorLbl" Content="Color" HorizontalAlignment="Left" Margin="355,75,0,299" Width="120" HorizontalContentAlignment="Center"/>
+        <Button x:Name="SubmitButton" Content="SUBMIT! :D" Margin="192,280,192.8,50" Click="SubmitButton_Click" VerticalAlignment="Top"/>
+
+        <ComboBox x:Name="BreedPicker" Margin="202,110,202.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True">
+        </ComboBox>
+        <Label x:Name="BreedLbl" Content="Breed" HorizontalAlignment="Left" Margin="202,75,0,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="NameTxtBx" HorizontalAlignment="Left" Height="23" Margin="192,239,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="140" HorizontalContentAlignment="Center"/>
+        
+        <ComboBox x:Name="GenderPicker" Margin="202,181,202.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True">
+        </ComboBox>
+        <Label x:Name="GenderLbl" Content="Gender" HorizontalAlignment="Left" Margin="202,146,0,228" Width="120" HorizontalContentAlignment="Center"/>
+
+
+    </Grid>
+</Page>

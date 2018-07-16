@@ -1,0 +1,16 @@
+﻿<Window x:Class="VirtualPetWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirtualPetWPF"
+        mc:Ignorable="d"
+        Title="Virtual Pet Simulator 2019 V1.1.2" Height="400" Width="525" Closing="Window_Closing">
+    <DockPanel>
+        <Frame x:Name="_NavigationFrame" NavigationUIVisibility="Hidden" />
+    </DockPanel>
+    
+    
+    
+    
+</Window>

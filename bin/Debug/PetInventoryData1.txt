@@ -1,0 +1,20 @@
+Ultra Ball,Toy,12,0,48
+Ball,Toy,5,0,25
+Chew Toy,Toy,1,0,19
+Chew Toy,Toy,3,0,19
+Food,Food,1,50,0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

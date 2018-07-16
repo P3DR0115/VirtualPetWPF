@@ -1,0 +1,62 @@
+A Note from the Author:
+The game will save on exit if you exit through the red X on the corner of the window.
+The game should also properly auto-load on start if no data was altered outside the game.
+
+Known Bugs:
+The last item in the inventory list has a chance to duplicate once you reload the game.
+I tried to fix this but wasn't able to make it stop.
+
+Main Points Below
+|||||||||||||||||
+VvVvVvVvVvVvVvVvV
+
+***Save Files' location will be VirtualPetWPF\VirtualPetWPF\bin\Debug    here, you'll see the .txt files***
+
+Debug Help:
+Should you wish to dubug features (such as the birthday), the pet's data is in this format:
+
+[WARNING]: Should you alter data, take care not to hit [ENTER] because creating a new line will prevent
+successful data loading in any of the files. Instead, if you change a value, just hit [CTRL+S] right away.
+If you find that some data isn't loading properly, there's a chance an extra enter is the culprit.
+In this case, you'd need to delete the file that isn't loading so that a new one may be created on Exit
+
+Doggo5   // Name
+Dog      // Species
+Husky    // Breed
+Large    // Size
+120      // Stamina
+White    // Color
+0        // Experience Points
+8/25/2018 11:37:18 PM    // bornDate AKA Birthday. May be a good idea changing this to today's date (with a previous year) to test birthday page
+8                        // Gems AKA In-Game Money
+1/1/0001 12:00:00 AM     // Honestly, doesn't matter, wasn't used.
+4/29/2018 11:39:17 PM    // Last Time player signed in 
+1/1/0001 12:00:00 AM     // Last Time Player walked their pet
+1/1/0001 12:00:00 AM     // Last Time Pet was Fed
+1/1/0001 12:00:00 AM     // Last Time Player played with Pet
+4/29/2018 11:38:16 PM    // Last Time Store was Visited. Used to determine when to restock
+1/1/0001 12:00:00 AM     // Again, not used but too late to delete
+120      // Max Stamina
+Male     // Gender
+0        // Level
+
+
+FAQ:
+
+Q: Why aren't there progress bars in other pages besides the Main Menu?
+A: Originally, I wanted to do this but after having trouble with the progress bar updating in the
+	Walk Page in Real-Time, I resorted to Labels which also have a "Refresh" feature.
+	It's also for this reason that the Walk Page is my least favorite/successful page... :/
+
+Q: What if I run out of Gems and my Pet needs more food?
+A: I consider that a "Game Over". You'd have to delete all Pet Data to restart.
+	I have added a CLEAR ALL button in the game to facilitate this.
+	[WARNING] this process is irreversible, 
+
+Q: How can I get more Gems?
+A: Making In-Game Purchases! (Just kidding) Well one way is by celebrating the Pet's birthday.
+	Another way is to perform Pet Skills. There's a small chance that you earn 5 Gems on a success.
+
+Q: Why does the Dog have the best stats? Shouldn't the game be more balanced?
+A: Because I totally have a preference for dogs. An unbalanced game can be more interresting.
+
