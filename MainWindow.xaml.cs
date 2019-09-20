@@ -22,10 +22,7 @@ namespace VirtualPetWPF
     /// 
     public partial class MainWindow : Window
     {
-        // Creating a new pet for the user! >:D     As a Global Variable
         public static Pet OGPet = new Pet();
-        //public static DispatcherTimer _Timer;
-        //public static TimeSpan _time;
         public static int progress = 0; // for walking
         public static Store OGStore = new Store();
 

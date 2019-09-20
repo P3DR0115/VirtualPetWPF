@@ -75,7 +75,7 @@ namespace VirtualPetWPF
             TimeLbl.Content = "Time Left: 0";
             completeLbl.Visibility = System.Windows.Visibility.Visible;
             XPLbl.Visibility = System.Windows.Visibility.Visible;
-            XPLbl.Content = "XP Earned: " + MainWindow.OGPet.temp;
+            XPLbl.Content = "XP Earned: " + MainWindow.OGPet.tempXP;
             MainWindow.OGPet.lastWalked = DateTime.Now;
         }
         

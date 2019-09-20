@@ -11,7 +11,7 @@
     <Grid>
         <Label Name="WalkMenuTitle" Content="Walk Menu" Margin="199,20,198.8,294" FontSize="20" HorizontalContentAlignment="Center"/>
 
-        <ComboBox x:Name="WalkPicker" Margin="202,110,202.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" ToolTip="Walks increment in length by 5 second increments starting with Brisk at 5 seconds">
+        <ComboBox x:Name="WalkPicker" Margin="202,110,202.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" ToolTip="Walk selections increase by 5 second increments starting with &quot;Brisk&quot; at a 5 second duration">
         </ComboBox>
         <Button x:Name="ReturnToMainButton" Content="Return to Main Menu" Margin="192,305,192.8,25" Click="ReturnToMainButton_Click" VerticalAlignment="Top"/>
         <Button x:Name="WalkButton" Content="Walk! :D" Margin="192,280,192.8,50" Click="WalkButton_Click" VerticalAlignment="Top"/>

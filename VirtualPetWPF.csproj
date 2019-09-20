@@ -84,9 +84,6 @@
     <Compile Include="TitlePage.xaml.cs">
       <DependentUpon>TitlePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WalkingPage.xaml.cs">
-      <DependentUpon>WalkingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WalkPage.xaml.cs">
       <DependentUpon>WalkPage.xaml</DependentUpon>
     </Compile>
@@ -135,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TitlePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WalkingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

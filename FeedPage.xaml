@@ -12,7 +12,7 @@
 
         <Label x:Name="FeedLbl" Content="Feeding Menu" Margin="150,22,150.8,292" FontSize="20" HorizontalContentAlignment="Center"/>
         <Label x:Name="InventoryLbl" Content="Inventory" Margin="212,113,192.8,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-        <ComboBox x:Name="ProductPicker" Margin="212,148,192.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True"/>
+        <ComboBox x:Name="ProductPicker" Margin="212,148,192.8,0" VerticalAlignment="Top" AllowDrop="True" AutomationProperties.IsRequiredForForm="True" ToolTip="Number next to food indicates how much stamina will be restored"/>
         <Button x:Name="UseButton" Content="Use" Margin="192,280,192.8,50" VerticalAlignment="Top" Click="UseButton_Click"/>
         <Button x:Name="ReturnToMainButton" Content="Return to Main Menu" Margin="192,305,192.8,25" VerticalAlignment="Top" Click="ReturnToMainButton_Click"/>
         <Label x:Name="StaminaIndicator" Content="Stamina: " HorizontalAlignment="Left" Margin="212,82,0,0" VerticalAlignment="Top" Width="150" ToolTip="Your Stamina"/>

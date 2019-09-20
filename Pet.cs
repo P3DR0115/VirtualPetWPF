@@ -10,8 +10,6 @@ namespace VirtualPetWPF
 {
     public class Pet
     {
-        //MainMenu mainMenu = new MainMenu();
-        
         public bool loadSuccess = false; // This is to check if successfully loaded a pet file.
         public bool loadInvSuccess = false; // This is to check if successfully loaded the pet's inventory
         public bool loadSkillsSuccess = false;
@@ -40,7 +38,7 @@ namespace VirtualPetWPF
         public int Gems = 150; // THIS IS MONEY $$$
         DateTime today = DateTime.Now;
         public DateTime bornDate;
-        public int temp;
+        public int tempXP;
 
         // Pet data and save location
         public static string[] ALLINFO = new string[19];
@@ -80,8 +78,6 @@ namespace VirtualPetWPF
             
             LoadInventory();
 
-            //test();
-
             if (!loadSkillsSuccess)
             {
                 Sit sit = new Sit();
@@ -93,7 +89,6 @@ namespace VirtualPetWPF
             {
                 age = rnd.Next(84, 168);
                 bornDate = today.AddDays(age);
-                //CustomizationMenu(this);
             }
 
         }
@@ -106,7 +101,6 @@ namespace VirtualPetWPF
             ALLINFO.Initialize();
             ALLINVENTORYINFO.Initialize();
             ALLSKILLINFO.Initialize();
-
         }
 
         public void WriteToALLINFO()
@@ -154,20 +148,16 @@ namespace VirtualPetWPF
                         + InventoryList.ElementAt(w).XPReward;
                 }
             }
-
-            //System.IO.File.AppendAllLines(SaveInventorylocation, ALLINVENTORYINFO);
+            
             System.IO.File.WriteAllLines(SaveInventorylocation, ALLINVENTORYINFO);
         }
-
-        // Just wanna say, I can't believe I came up with this X'D
+        
         public void LoadInventory()
         {
             try
             {
                 // Get all the inventory data and place it in a temporary string array;
-                ALLINVENTORYINFO = System.IO.File.ReadAllLines(SaveInventorylocation);                
-
-                //oneItem[] = ALLINVENTORYINFO[].Split(',');
+                ALLINVENTORYINFO = System.IO.File.ReadAllLines(SaveInventorylocation);
 
                 for (int il = 0; il < ALLINVENTORYINFO.Length; il++)
                 {
@@ -205,8 +195,7 @@ namespace VirtualPetWPF
                     + SkillList.ElementAt(w).maxXP;
                 
             }
-
-            //System.IO.File.AppendAllLines(SaveInventorylocation, ALLINVENTORYINFO);
+            
             System.IO.File.WriteAllLines(SaveSkillLocation, ALLSKILLINFO);
 
         }
@@ -242,7 +231,6 @@ namespace VirtualPetWPF
             catch (Exception e)
             {
                 ALLSKILLINFO.Initialize();
-                //loadInvSuccess = false;
             }
 
         }
@@ -309,8 +297,8 @@ namespace VirtualPetWPF
                         BirthdayToday = true;
                         // Yes correct day
                         //WriteLine("It's " + name + " birthday! Woot!");
-                        //WriteLine("As a small gift, please take these 25 Happy Points!");
-                        //pet.happyPoints += 25;
+                        //WriteLine("As a small gift, please take these 25 Gems!");
+                        //pet.Gems += 25;
                     }
 
                 }
@@ -355,29 +343,13 @@ namespace VirtualPetWPF
 
         public void DelayOneSec()
         {
-            //move to its own function for ex Delay Progress
-            //neilinglese@gmail.com
-
-            // Credit to Neil Inglese for helping me with programming this method
-
-            // As much as I wanted to use this instead of Thread.Sleep, I couldn't get it to work for my purposes.
-            // Thus, I resorted to Thread.Sleep, Something I was more familiar with. 
-
-            //var delay = Task.Run(async () =>
-            //{
-            //    Stopwatch sw = new Stopwatch();
-            //    await Task.Delay(1000);
-            //    sw.Stop();
-            //});
-
             System.Threading.Thread.Sleep(1000);
-
         }
 
         public int WalkPet(string walkLength)
         {
             // This is how much xp is earned
-            temp = 50;
+            tempXP = 50;
             int walkChoice = 0;
 
             for(int q = 0; q < walkList.Length; q++)
@@ -389,48 +361,35 @@ namespace VirtualPetWPF
                         case 0:
                             {
                                 MainWindow.OGPet.stamina -= 5;
-                                //System.Threading.Thread.Sleep(5000);
-                                //MainWindow._time = TimeSpan.FromSeconds(10);
-
-                                //MainWindow._Timer.Equals(MainWindow._time);
-                                //MainWindow._Timer.Dispatcher.BeginInvoke(System.Windows.Threading.DispatcherPriority.Normal, delegate 
-                                //{
-                                //    if (MainWindow._time == TimeSpan.Zero) MainWindow._Timer.Stop();
-                                //    MainWindow._time = MainWindow._time.Add(TimeSpan.FromSeconds(-1));
-                                //}, Application.Current.Dispatcher);
                                 walkChoice = q;
-                                temp /= 3;
+                                tempXP /= 3;
                                 break;
                             }
                         case 1:
                             {
                                 MainWindow.OGPet.stamina -= 10;
-                                //System.Threading.Thread.Sleep(10000);
                                 walkChoice = q;
-                                temp /= 2;
+                                tempXP /= 2;
                                 break;
                             }
                         case 2:
                             {
                                 MainWindow.OGPet.stamina -= 15;
-                                //System.Threading.Thread.Sleep(15000);
                                 walkChoice = q;
                                 break;
                             }
                         case 3:
                             {
                                 MainWindow.OGPet.stamina -= 20;
-                                //System.Threading.Thread.Sleep(20000);
                                 walkChoice = q;
-                                temp = (temp + (temp / 2));
+                                tempXP = (tempXP + (tempXP / 2));
                                 break;
                             }
                         case 4:
                             {
                                 MainWindow.OGPet.stamina -= 25;
-                                //System.Threading.Thread.Sleep(25000);
                                 walkChoice = q;
-                                temp *= 2;
+                                tempXP *= 2;
                                 break;
                             }
                     }
@@ -438,7 +397,7 @@ namespace VirtualPetWPF
             }
             
             MainWindow.OGPet.lastWalked = DateTime.Now;
-            MainWindow.OGPet.experiencePoints += temp;
+            MainWindow.OGPet.experiencePoints += tempXP;
 
             walkChoice = ((5 * walkChoice) + 5);
 
